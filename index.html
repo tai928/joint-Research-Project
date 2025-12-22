@@ -168,198 +168,205 @@
     </footer>
   </div>
 
-  <script>
-    const I18N = {
-      ja: {
-        page_title: "日韓共同研究",
-        site_title: "日韓共同研究",
-        site_subtitle: "左右に両校の概要を並べ、ボタンにホバーで詳細が表示されます。",
-        pill_text: "Joint Research Showcase",
+<script>
+  // ✅ data-i18n で使ってるキーだけの最小辞書（不要キーは削除）
+  const I18N = {
+    ja: {
+      page_title: "日韓共同研究",
+      site_title: "日韓共同研究",
+      site_subtitle: "左右に両校の概要を並べ、ボタンにホバーで詳細が表示されます。",
+      pill_text: "Joint Research Showcase",
 
-        kr_badge: "Korea / 高校概要",
-        kr_school_name: "光州ソフトウェアマイスター高校",
-        kr_chip_location: "所在地：光州広域市",
-        kr_chip_field: "分野：ソフトウェア / 情報",
-        kr_chip_team: "参加メンバー：",
-        kr_feature_1: "ソフトウェア分野に特化した専門教育",
-        kr_feature_2: "実践的な開発・制作を中心とした学習",
-        kr_feature_3: "チーム開発・発表活動の経験を重視",
-        kr_role_1: "データ収集 / 設計・検証 / 共同発表の準備",
-        kr_role_2: "成果物：レポート、分析結果、発表資料",
-        kr_members_names: "（メンバー確定後に追記）",
+      kr_badge: "Korea / 高校概要",
+      kr_school_name: "光州ソフトウェアマイスター高校",
+      kr_chip_location: "所在地：光州広域市",
+      kr_chip_field: "分野：ソフトウェア / 情報",
+      kr_chip_team: "参加メンバー：",
+      kr_feature_1: "ソフトウェア分野に特化した専門教育",
+      kr_feature_2: "実践的な開発・制作を中心とした学習",
+      kr_feature_3: "チーム開発・発表活動の経験を重視",
+      kr_role_1: "データ収集 / 設計・検証 / 共同発表の準備",
+      kr_role_2: "成果物：レポート、分析結果、発表資料",
+      kr_members_names: "（メンバー確定後に追記）",
 
-        jp_badge: "Japan / 高校概要",
-        jp_school_name: "都立科学技術高等学校",
-        jp_chip_location: "所在地：Tokyo",
-        jp_chip_field: "分野：Science & Tech",
-        jp_chip_team: "参加メンバー：鈴鹿泰正、島村真央",
-        jp_feature_1: "探究・課題研究中心のカリキュラム",
-        jp_feature_2: "制作（Web / アプリ / 実験）に強い",
-        jp_feature_3: "外部発表・地域連携の実績",
-        jp_role_1: "Web実装 / UI設計 / 可視化 / まとめ",
-        jp_role_2: "成果物：Web、動画、展示ポスター",
-        jp_members_names: "鈴鹿泰正、島村真央",
+      jp_badge: "Japan / 高校概要",
+      jp_school_name: "都立科学技術高等学校",
+      jp_chip_location: "所在地：Tokyo",
+      jp_chip_field: "分野：Science & technology",
+      jp_chip_team: "参加メンバー：鈴鹿泰正、島村真央",
+      jp_feature_1: "探究・課題研究中心のカリキュラム",
+      jp_feature_2: "文部科学省のSSH指定を受け、より高度な理数探究活動",
+      jp_feature_3: "研究職や技術系キャリアにつながる基盤作りに最適",
+      jp_role_1: "Web実装 / アンケート制作",
+      jp_role_2: "成果物：Webサイト / 発表資料制作",
+      jp_members_names: "鈴鹿泰正、島村真央",
 
-        features_title: "学校の特徴",
-        role_title: "共同研究での役割",
-        btn_research: "研究内容を見る",
-        btn_members: "メンバー",
+      features_title: "学校の特徴",
+      role_title: "共同研究での役割",
+      btn_research: "研究内容を見る",
+      btn_members: "メンバー",
 
-        tip_research_title: "研究の要点",
-        tip_research_text: "テーマ・目的・方法・結果を1ページで整理。図表の導入もここ。📊",
-        tip_members_title: "参加者",
+      tip_research_title: "研究の要点",
+      tip_research_text: "テーマ・目的・方法・結果を1ページで整理。図表の導入もここ。📊",
+      tip_members_title: "参加者",
 
-        section_research_title: "研究内容（Research）",
-        section_research_text: "ここに「目的→方法→結果→考察→今後」を入れていく。図表を置くならここ。📊",
-        research_cap1: "図：研究の全体像（概念図/フロー）",
-        research_cap2: "画像：実験・制作・観測の様子",
+      section_research_title: "研究内容（Research）",
+      section_research_text: "ここに「目的→方法→結果→考察→今後」を入れていく。",
+      research_cap1: "図：研究の全体像（概念図/フロー）",
+      research_cap2: "画像：実験・制作・観測の様子",
 
-        section_members_title: "メンバー（Members）",
-        section_members_text: "参加者情報をここに追加します。",
+      section_members_title: "メンバー（Members）",
+      section_members_text: "参加者情報をここに追加します。",
 
-        footer_text: "© Joint Research Project",
-        footer_updated: "Last updated: 2025-12-22",
-      },
+      footer_text: "© Joint Research Project",
+      footer_updated: "Last updated: 2025-12-22",
+    },
 
-      en: {
-        page_title: "Japan–Korea Joint Research",
-        site_title: "Japan–Korea Joint Research",
-        site_subtitle: "Two school overviews are shown side-by-side. Hover the buttons to see details.",
-        pill_text: "Joint Research Showcase",
+    en: {
+      page_title: "Japan–Korea Joint Research",
+      site_title: "Japan–Korea Joint Research",
+      site_subtitle: "Two school overviews are shown side-by-side. Hover the buttons to see details.",
+      pill_text: "Joint Research Showcase",
 
-        kr_badge: "Korea / School Overview",
-        kr_school_name: "Gwangju Software Meister High School",
-        kr_chip_location: "Location: Gwangju, Republic of Korea",
-        kr_chip_field: "Field: Software / Information Technology",
-        kr_chip_team: "Members:",
-        kr_feature_1: "Specialized education focused on software",
-        kr_feature_2: "Learning centered on practical development and building",
-        kr_feature_3: "Emphasis on team development and presentations",
-        kr_role_1: "Data collection / design & validation / joint presentation preparation",
-        kr_role_2: "Outputs: report, analysis results, presentation slides",
-        kr_members_names: "(to be added)",
+      kr_badge: "Korea / School Overview",
+      kr_school_name: "Gwangju Software Meister High School",
+      kr_chip_location: "Location: Gwangju, Republic of Korea",
+      kr_chip_field: "Field: Software / Information Technology",
+      kr_chip_team: "Members:",
+      kr_feature_1: "Specialized education focused on software",
+      kr_feature_2: "Learning centered on practical development and building",
+      kr_feature_3: "Emphasis on team development and presentations",
+      kr_role_1: "Data collection / design & validation / joint presentation preparation",
+      kr_role_2: "Outputs: report, analysis results, presentation slides",
+      kr_members_names: "(to be added)",
 
-        jp_badge: "Japan / School Overview",
-        jp_school_name: "Tokyo Metropolitan Science and Technology High School",
-        jp_chip_location: "Location: Tokyo",
-        jp_chip_field: "Field: Science & Tech",
-        jp_chip_team: "Members: Taisei Suzuka, Mao Shimamura",
-        jp_feature_1: "Curriculum centered on inquiry and research projects",
-        jp_feature_2: "Strong in building (Web / apps / experiments)",
-        jp_feature_3: "Track record of external presentations and collaborations",
-        jp_role_1: "Web implementation / UI design / visualization / documentation",
-        jp_role_2: "Outputs: website, video, exhibition poster",
-        jp_members_names: "Taisei Suzuka, Mao Shimamura",
+      jp_badge: "Japan / School Overview",
+      jp_school_name: "Tokyo Metropolitan Science and Technology High School",
+      jp_chip_location: "Location: Tokyo",
+      jp_chip_field: "Field: Science & technology",
+      jp_chip_team: "Members: Taisei Suzuka, Mao Shimamura",
+      jp_feature_1: "Inquiry- and project-based curriculum",
+      jp_feature_2: "Designated as an SSH school for advanced STEM inquiry activities",
+      jp_feature_3: "Strong foundation for research and engineering career paths",
+      jp_role_1: "Web implementation / survey creation",
+      jp_role_2: "Outputs: website / presentation materials",
+      jp_members_names: "Taisei Suzuka, Mao Shimamura",
 
-        features_title: "School Features",
-        role_title: "Role in the Joint Project",
-        btn_research: "View Research",
-        btn_members: "Members",
+      features_title: "School Features",
+      role_title: "Role in the Joint Project",
+      btn_research: "View Research",
+      btn_members: "Members",
 
-        tip_research_title: "Research Summary",
-        tip_research_text: "Organize topic, goals, methods, and results on one page. Charts go here. 📊",
-        tip_members_title: "Participants",
+      tip_research_title: "Research Summary",
+      tip_research_text: "Organize topic, goals, methods, and results on one page. Charts go here. 📊",
+      tip_members_title: "Participants",
 
-        section_research_title: "Research",
-        section_research_text: "Write: goals → methods → results → discussion → next steps. Charts go here. 📊",
-        research_cap1: "Diagram: research overview (concept / flow)",
-        research_cap2: "Photo: experiment / building / observation",
+      section_research_title: "Research",
+      section_research_text: "Write: goals → methods → results → discussion → next steps.",
+      research_cap1: "Diagram: research overview (concept / flow)",
+      research_cap2: "Photo: experiment / building / observation",
 
-        section_members_title: "Members",
-        section_members_text: "Add participant information here.",
+      section_members_title: "Members",
+      section_members_text: "Add participant information here.",
 
-        footer_text: "© Joint Research Project",
-        footer_updated: "Last updated: 2025-12-22",
-      },
+      footer_text: "© Joint Research Project",
+      footer_updated: "Last updated: 2025-12-22",
+    },
 
-      ko: {
-        page_title: "한일 공동연구",
-        site_title: "한일 공동연구",
-        site_subtitle: "양교 개요를 좌우로 배치하고, 버튼에 마우스를 올리면 상세가 표시됩니다.",
-        pill_text: "Joint Research Showcase",
+    ko: {
+      page_title: "한일 공동연구",
+      site_title: "한일 공동연구",
+      site_subtitle: "양교 개요를 좌우로 배치하고, 버튼에 마우스를 올리면 상세가 표시됩니다.",
+      pill_text: "Joint Research Showcase",
 
-        kr_badge: "Korea / 학교 개요",
-        kr_school_name: "광주 소프트웨어 마이스터 고등학교",
-        kr_chip_location: "지역: 광주광역시",
-        kr_chip_field: "분야: 소프트웨어 / 정보",
-        kr_chip_team: "참여 멤버:",
-        kr_feature_1: "소프트웨어 분야에 특화된 전문 교육",
-        kr_feature_2: "실습 중심의 개발·제작 학습",
-        kr_feature_3: "팀 개발 및 발표 경험을 중시",
-        kr_role_1: "데이터 수집 / 설계·검증 / 공동 발표 준비",
-        kr_role_2: "산출물: 보고서, 분석 결과, 발표자료",
-        kr_members_names: "(추후 추가)",
+      kr_badge: "Korea / 학교 개요",
+      kr_school_name: "광주 소프트웨어 마이스터 고등학교",
+      kr_chip_location: "지역: 광주광역시",
+      kr_chip_field: "분야: 소프트웨어 / 정보",
+      kr_chip_team: "참여 멤버:",
+      kr_feature_1: "소프트웨어 분야에 특화된 전문 교육",
+      kr_feature_2: "실습 중심의 개발·제작 학습",
+      kr_feature_3: "팀 개발 및 발표 경험을 중시",
+      kr_role_1: "데이터 수집 / 설계·검증 / 공동 발표 준비",
+      kr_role_2: "산출물: 보고서, 분석 결과, 발표자료",
+      kr_members_names: "(추후 추가)",
 
-        jp_badge: "Japan / 학교 개요",
-        jp_school_name: "도쿄도립 과학기술 고등학교",
-        jp_chip_location: "지역: Tokyo",
-        jp_chip_field: "분야: Science & Tech",
-        jp_chip_team: "참여 멤버: 스즈카 타이세이, 시마무라 마오",
-        jp_feature_1: "탐구·연구 프로젝트 중심 커리큘럼",
-        jp_feature_2: "제작(Web / 앱 / 실험)에 강점",
-        jp_feature_3: "외부 발표 및 연계 실적",
-        jp_role_1: "Web 구현 / UI 설계 / 시각화 / 정리",
-        jp_role_2: "산출물: 웹사이트, 영상, 전시 포스터",
-        jp_members_names: "스즈카 타이세이, 시마무라 마오",
+      jp_badge: "Japan / 학교 개요",
+      jp_school_name: "도쿄도립 과학기술 고등학교",
+      jp_chip_location: "지역: Tokyo",
+      jp_chip_field: "분야: Science & technology",
+      jp_chip_team: "참여 멤버: 스즈카 타이세이, 시마무라 마오",
+      jp_feature_1: "탐구·연구 프로젝트 중심 커리큘럼",
+      jp_feature_2: "SSH 지정으로 고도화된 이공계 탐구 활동",
+      jp_feature_3: "연구·기술 계열 진로 기반을 다지기 좋음",
+      jp_role_1: "Web 구현 / 설문 제작",
+      jp_role_2: "산출물: 웹사이트 / 발표자료 제작",
+      jp_members_names: "스즈카 타이세이, 시마무라 마오",
 
-        features_title: "학교 특징",
-        role_title: "공동연구에서의 역할",
-        btn_research: "연구 내용 보기",
-        btn_members: "멤버",
+      features_title: "학교 특징",
+      role_title: "공동연구에서의 역할",
+      btn_research: "연구 내용 보기",
+      btn_members: "멤버",
 
-        tip_research_title: "연구 요점",
-        tip_research_text: "주제·목표·방법·결과를 1페이지로 정리. 도표는 여기. 📊",
-        tip_members_title: "참여자",
+      tip_research_title: "연구 요점",
+      tip_research_text: "주제·목표·방법·결과를 1페이지로 정리. 도표는 여기. 📊",
+      tip_members_title: "참여자",
 
-        section_research_title: "연구 내용(Research)",
-        section_research_text: "목표→방법→결과→고찰→향후 계획 순으로 작성. 도표는 여기. 📊",
-        research_cap1: "도표: 연구 개요(개념/흐름)",
-        research_cap2: "이미지: 실험·제작·관측 모습",
+      section_research_title: "연구 내용(Research)",
+      section_research_text: "여기에 ‘목표→방법→결과→고찰→향후 계획’을 작성합니다.",
+      research_cap1: "도표: 연구 개요(개념/흐름)",
+      research_cap2: "이미지: 실험·제작·관측 모습",
 
-        section_members_title: "멤버(Members)",
-        section_members_text: "참여자 정보를 여기에 추가합니다.",
+      section_members_title: "멤버(Members)",
+      section_members_text: "참여자 정보를 여기에 추가합니다.",
 
-        footer_text: "© Joint Research Project",
-        footer_updated: "Last updated: 2025-12-22",
-      }
-    };
-
-    function setLanguage(lang) {
-      const dict = I18N[lang] || I18N.ja;
-
-      document.documentElement.lang = lang;
-      document.title = dict.page_title || dict.site_title || "日韓共同研究";
-
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (dict[key] !== undefined) el.textContent = dict[key];
-      });
-
-      document.querySelectorAll(".lang-btn").forEach(btn => {
-        btn.classList.toggle("active", btn.dataset.lang === lang);
-      });
-
-      try { localStorage.setItem("lang", lang); } catch (_) {}
+      footer_text: "© Joint Research Project",
+      footer_updated: "Last updated: 2025-12-22",
     }
+  };
 
-    (function initLang(){
-      let lang = "ja";
-      try {
-        const saved = localStorage.getItem("lang");
-        if (saved && I18N[saved]) lang = saved;
-        else {
-          const nav = (navigator.language || "ja").toLowerCase();
-          if (nav.startsWith("ko")) lang = "ko";
-          else if (nav.startsWith("en")) lang = "en";
-        }
-      } catch (_) {}
+  function setLanguage(lang) {
+    const dict = I18N[lang] || I18N.ja;
 
-      setLanguage(lang);
+    // lang と title
+    document.documentElement.lang = lang;
+    document.title = dict.page_title || dict.site_title || "日韓共同研究";
 
-      document.querySelectorAll(".lang-btn").forEach(btn => {
-        btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
-      });
-    })();
-  </script>
+    // テキスト差し替え
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+
+    // active ボタン
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    // 保存
+    try { localStorage.setItem("lang", lang); } catch (_) {}
+  }
+
+  (function initLang(){
+    let lang = "ja";
+
+    try {
+      const saved = localStorage.getItem("lang");
+      if (saved && I18N[saved]) {
+        lang = saved;
+      } else {
+        const nav = (navigator.language || "ja").toLowerCase();
+        if (nav.startsWith("ko")) lang = "ko";
+        else if (nav.startsWith("en")) lang = "en";
+      }
+    } catch (_) {}
+
+    setLanguage(lang);
+
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+    });
+  })();
+</script>
 </body>
 </html>
