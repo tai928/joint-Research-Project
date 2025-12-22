@@ -10,33 +10,58 @@
 
 <body>
   <div class="wrap">
-    <header class="topbar">
-      <div class="title">
-        <h1 data-i18n="site_title">日韓共同研究</h1>
-        <p data-i18n="site_subtitle">左右に両校の概要を並べ、ボタンにホバーで詳細が表示されます。</p>
+
+    <!-- ===== HERO（タイトル＋背景コラージュ）===== -->
+    <header class="hero" aria-label="Site Header">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-bg-left"></div>
+        <div class="hero-bg-right"></div>
       </div>
 
-      <div class="topbar-right">
-        <div class="pill"><span class="dot"></span> <span data-i18n="pill_text">Joint Research Showcase</span></div>
+      <div class="hero-content">
+        <div class="hero-top">
+          <div class="title">
+            <h1 data-i18n="site_title">日韓共同研究</h1>
+            <p data-i18n="site_subtitle">左右に両校の概要を並べ、ボタンにホバーで詳細が表示されます。</p>
+          </div>
 
-        <nav class="lang-switch" aria-label="Language switch">
-          <button class="lang-btn" data-lang="ja" type="button">日本語</button>
-          <button class="lang-btn" data-lang="en" type="button">English</button>
-          <button class="lang-btn" data-lang="ko" type="button">한국어</button>
-        </nav>
+          <div class="topbar-right">
+            <div class="pill">
+              <span class="dot"></span>
+              <span data-i18n="pill_text">Joint Research Showcase</span>
+            </div>
+
+            <nav class="lang-switch" aria-label="Language switch">
+              <button class="lang-btn" data-lang="ja" type="button">日本語</button>
+              <button class="lang-btn" data-lang="en" type="button">English</button>
+              <button class="lang-btn" data-lang="ko" type="button">한국어</button>
+            </nav>
+          </div>
+        </div>
+
+        <div class="hero-hint">
+          <span class="hint-chip" data-i18n="hero_hint_left">左：韓国（光州ソフトウェアマイスター高校）</span>
+          <span class="hint-chip" data-i18n="hero_hint_right">右：日本（都立科学技術高等学校）</span>
+        </div>
       </div>
     </header>
 
-    <main class="grid">
+    <!-- ===== OVERVIEW（左右カード）===== -->
+    <main class="grid" aria-label="School Overviews">
+
       <!-- 左：韓国 -->
       <section class="card kr" aria-label="Korean High School Overview">
-        <div class="badge"><span class="flag">🇰🇷</span> <span data-i18n="kr_badge">Korea / 高校概要</span></div>
-        <h2 data-i18n="kr_school_name"><a href="https://www.metro.ed.jp/kagakugijyutu-h/">光州ソフトウェアマイスター高校</a></h2>
+        <div class="badge">
+          <span class="flag">🇰🇷</span>
+          <span data-i18n="kr_badge">Korea / 高校概要</span>
+        </div>
+
+        <h2 data-i18n="kr_school_name">光州ソフトウェアマイスター高校</h2>
 
         <div class="meta">
           <span class="chip" data-i18n="kr_chip_location">所在地：光州広域市</span>
           <span class="chip" data-i18n="kr_chip_field">分野：ソフトウェア / 情報</span>
-          <span class="chip" data-i18n="kr_chip_team">参加メンバー：</span>
+          <span class="chip" data-i18n="kr_chip_team">参加メンバー：（後で追記）</span>
         </div>
 
         <div class="section">
@@ -61,7 +86,7 @@
             <a class="btn kr" href="#research" data-i18n="btn_research">研究内容を見る</a>
             <div class="hover-detail kr">
               <strong data-i18n="tip_research_title">研究の要点</strong>
-              <p data-i18n="tip_research_text">テーマ・目的・方法・結果を1ページで整理。図表の導入もここ。📊</p>
+              <p data-i18n="tip_research_text">図と画像で、目的→方法→結果→考察→今後をスライド形式でまとめます。📊</p>
             </div>
           </div>
 
@@ -77,8 +102,12 @@
 
       <!-- 右：日本 -->
       <section class="card jp" aria-label="Japanese High School Overview">
-        <div class="badge"><span class="flag">🇯🇵</span> <span data-i18n="jp_badge">Japan / 高校概要</span></div>
-        <h2 data-i18n="jp_school_name"><a href="https://www.metro.ed.jp/kagakugijyutu-h/">都立科学技術高等学校</a></h2>
+        <div class="badge">
+          <span class="flag">🇯🇵</span>
+          <span data-i18n="jp_badge">Japan / 高校概要</span>
+        </div>
+
+        <h2 data-i18n="jp_school_name">都立科学技術高等学校</h2>
 
         <div class="meta">
           <span class="chip" data-i18n="jp_chip_location">所在地：Tokyo</span>
@@ -99,7 +128,6 @@
           <h3 data-i18n="role_title">共同研究での役割</h3>
           <ul>
             <li data-i18n="jp_role_1">Web実装 / UI設計 / 可視化 / まとめ</li>
- 
             <li data-i18n="jp_role_2">成果物：Web、動画、展示ポスター</li>
           </ul>
         </div>
@@ -109,7 +137,7 @@
             <a class="btn jp" href="#research" data-i18n="btn_research">研究内容を見る</a>
             <div class="hover-detail jp">
               <strong data-i18n="tip_research_title">研究の要点</strong>
-              <p data-i18n="tip_research_text">テーマ・目的・方法・結果を1ページで整理。図表の導入もここ。📊</p>
+              <p data-i18n="tip_research_text">図と画像で、目的→方法→結果→考察→今後をスライド形式でまとめます。📊</p>
             </div>
           </div>
 
@@ -124,16 +152,134 @@
       </section>
     </main>
 
-    <!-- 下のセクション -->
-    <section id="research" class="below">
-      <h2 data-i18n="section_research_title">研究内容（Research）</h2>
-      <p class="below-muted" data-i18n="section_research_text">
-        ここに「目的→方法→結果→考察→今後」を入れていく。図表を置くならここ。📊
-      </p>
+    <!-- ===== RESEARCH SLIDER（図＋画像スライド）===== -->
+    <section id="research" class="below research" aria-label="Research Slides">
+      <div class="research-head">
+        <h2 data-i18n="section_research_title">研究内容（Research）</h2>
+        <p class="below-muted" data-i18n="section_research_text">
+          図と画像で、目的→方法→結果→考察→今後をスライド形式でまとめます。📊
+        </p>
+      </div>
+
+      <div class="slider" data-slider>
+        <div class="slides" data-slides>
+
+          <!-- Slide 1 -->
+          <article class="slide is-active" data-slide>
+            <div class="slide-top">
+              <div class="slide-kicker">Slide 01</div>
+              <h3 class="slide-title" data-i18n="s1_title">研究テーマ</h3>
+              <p class="slide-text" data-i18n="s1_text">研究の背景とテーマを短く説明します。</p>
+            </div>
+
+            <div class="slide-grid">
+              <figure class="media">
+                <img src="images/slide-01-diagram.png" alt="研究の概要図" loading="lazy">
+                <figcaption data-i18n="s1_cap1">図：全体像（フロー、概念図、構成図）</figcaption>
+              </figure>
+
+              <figure class="media">
+                <img src="images/slide-01-photo.jpg" alt="研究に関する写真" loading="lazy">
+                <figcaption data-i18n="s1_cap2">画像：実験・制作・計測の様子</figcaption>
+              </figure>
+            </div>
+
+            <div class="slide-notes">
+              <div class="note"><strong data-i18n="label_goal">目的：</strong><span data-i18n="s1_note1">（例）◯◯を明らかにする</span></div>
+              <div class="note"><strong data-i18n="label_hyp">仮説：</strong><span data-i18n="s1_note2">（例）◯◯だと◯◯になる</span></div>
+            </div>
+          </article>
+
+          <!-- Slide 2 -->
+          <article class="slide" data-slide>
+            <div class="slide-top">
+              <div class="slide-kicker">Slide 02</div>
+              <h3 class="slide-title" data-i18n="s2_title">方法（実験 / 実装）</h3>
+              <p class="slide-text" data-i18n="s2_text">手順・条件・使用技術を整理します。</p>
+            </div>
+
+            <div class="slide-grid">
+              <figure class="media">
+                <img src="images/slide-02-diagram.png" alt="方法の図" loading="lazy">
+                <figcaption data-i18n="s2_cap1">図：手順・システム構成・評価設計</figcaption>
+              </figure>
+
+              <figure class="media">
+                <img src="images/slide-02-photo.jpg" alt="方法の写真" loading="lazy">
+                <figcaption data-i18n="s2_cap2">画像：画面キャプチャ / 作業の様子</figcaption>
+              </figure>
+            </div>
+
+            <div class="slide-notes">
+              <div class="note"><strong data-i18n="label_proc">手順：</strong><span data-i18n="s2_note1">（例）①… ②… ③…</span></div>
+              <div class="note"><strong data-i18n="label_eval">評価：</strong><span data-i18n="s2_note2">（例）精度 / 時間 / 再現性</span></div>
+            </div>
+          </article>
+
+          <!-- Slide 3 -->
+          <article class="slide" data-slide>
+            <div class="slide-top">
+              <div class="slide-kicker">Slide 03</div>
+              <h3 class="slide-title" data-i18n="s3_title">結果（グラフ / 比較）</h3>
+              <p class="slide-text" data-i18n="s3_text">結果のポイントを最大3点に絞って示します。</p>
+            </div>
+
+            <div class="slide-grid">
+              <figure class="media">
+                <img src="images/slide-03-diagram.png" alt="結果の図" loading="lazy">
+                <figcaption data-i18n="s3_cap1">図：グラフ、表、比較図</figcaption>
+              </figure>
+
+              <figure class="media">
+                <img src="images/slide-03-photo.jpg" alt="成果物の写真" loading="lazy">
+                <figcaption data-i18n="s3_cap2">画像：成果物 / 実験結果の写真</figcaption>
+              </figure>
+            </div>
+
+            <div class="slide-notes">
+              <div class="note"><strong data-i18n="label_main">主結果：</strong><span data-i18n="s3_note1">（例）◯◯が◯◯%改善</span></div>
+              <div class="note"><strong data-i18n="label_disc">考察：</strong><span data-i18n="s3_note2">（例）◯◯が原因と推定</span></div>
+            </div>
+          </article>
+
+          <!-- Slide 4 -->
+          <article class="slide" data-slide>
+            <div class="slide-top">
+              <div class="slide-kicker">Slide 04</div>
+              <h3 class="slide-title" data-i18n="s4_title">今後（改善案 / 展開）</h3>
+              <p class="slide-text" data-i18n="s4_text">次の改善と、共同研究としての展開をまとめます。</p>
+            </div>
+
+            <div class="slide-grid">
+              <figure class="media">
+                <img src="images/slide-04-diagram.png" alt="今後の図" loading="lazy">
+                <figcaption data-i18n="s4_cap1">図：ロードマップ / 改善計画</figcaption>
+              </figure>
+
+              <figure class="media">
+                <img src="images/slide-04-photo.jpg" alt="今後のイメージ" loading="lazy">
+                <figcaption data-i18n="s4_cap2">画像：次の取り組み（イメージ）</figcaption>
+              </figure>
+            </div>
+
+            <div class="slide-notes">
+              <div class="note"><strong data-i18n="label_impr">改善：</strong><span data-i18n="s4_note1">（例）データ量拡張、UI改善</span></div>
+              <div class="note"><strong data-i18n="label_next">展開：</strong><span data-i18n="s4_note2">（例）授業での活用、公開デモ</span></div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="slider-ui">
+          <button class="nav-btn" type="button" data-prev aria-label="前のスライド">←</button>
+          <div class="dots" data-dots aria-label="スライド選択"></div>
+          <button class="nav-btn" type="button" data-next aria-label="次のスライド">→</button>
+        </div>
+      </div>
     </section>
 
-    <!-- ひとまずアンカー先だけ確保（必要になったら中身を書く） -->
-    <section id="members" class="below">
+    <!-- ===== MEMBERS（アンカー先）===== -->
+    <section id="members" class="below" aria-label="Members">
       <h2 data-i18n="section_members_title">メンバー（Members）</h2>
       <p class="below-muted" data-i18n="section_members_text">参加者情報をここに追加します。</p>
     </section>
@@ -143,22 +289,25 @@
       <span class="sep"> / </span>
       <span data-i18n="footer_updated">Last updated: 2025-12-22</span>
     </footer>
+
   </div>
 
   <script>
-    // ✅ data-i18n で使ってるキーだけの最小辞書（不要キーは削除済み）
+    // ===== i18n（使ってるキーだけ）=====
     const I18N = {
       ja: {
         page_title: "日韓共同研究",
         site_title: "日韓共同研究",
         site_subtitle: "左右に両校の概要を並べ、ボタンにホバーで詳細が表示されます。",
         pill_text: "Joint Research Showcase",
+        hero_hint_left: "左：韓国（光州ソフトウェアマイスター高校）",
+        hero_hint_right: "右：日本（都立科学技術高等学校）",
 
         kr_badge: "Korea / 高校概要",
         kr_school_name: "光州ソフトウェアマイスター高校",
         kr_chip_location: "所在地：光州広域市",
         kr_chip_field: "分野：ソフトウェア / 情報",
-        kr_chip_team: "参加メンバー：",
+        kr_chip_team: "参加メンバー：（後で追記）",
         kr_feature_1: "ソフトウェア分野に特化した専門教育",
         kr_feature_2: "実践的な開発・制作を中心とした学習",
         kr_feature_3: "チーム開発・発表活動の経験を重視",
@@ -182,32 +331,69 @@
         role_title: "共同研究での役割",
         btn_research: "研究内容を見る",
         btn_members: "メンバー",
-
         tip_research_title: "研究の要点",
-        tip_research_text: "テーマ・目的・方法・結果を1ページで整理。図表の導入もここ。📊",
+        tip_research_text: "図と画像で、目的→方法→結果→考察→今後をスライド形式でまとめます。📊",
         tip_members_title: "参加者",
 
         section_research_title: "研究内容（Research）",
-        section_research_text: "ここに「目的→方法→結果→考察→今後」を入れていく。図表を置くならここ。📊",
+        section_research_text: "図と画像で、目的→方法→結果→考察→今後をスライド形式でまとめます。📊",
         section_members_title: "メンバー（Members）",
         section_members_text: "参加者情報をここに追加します。",
+
+        s1_title: "研究テーマ",
+        s1_text: "研究の背景とテーマを短く説明します。",
+        s1_cap1: "図：全体像（フロー、概念図、構成図）",
+        s1_cap2: "画像：実験・制作・計測の様子",
+        s1_note1: "（例）◯◯を明らかにする",
+        s1_note2: "（例）◯◯だと◯◯になる",
+
+        s2_title: "方法（実験 / 実装）",
+        s2_text: "手順・条件・使用技術を整理します。",
+        s2_cap1: "図：手順・システム構成・評価設計",
+        s2_cap2: "画像：画面キャプチャ / 作業の様子",
+        s2_note1: "（例）①… ②… ③…",
+        s2_note2: "（例）精度 / 時間 / 再現性",
+
+        s3_title: "結果（グラフ / 比較）",
+        s3_text: "結果のポイントを最大3点に絞って示します。",
+        s3_cap1: "図：グラフ、表、比較図",
+        s3_cap2: "画像：成果物 / 実験結果の写真",
+        s3_note1: "（例）◯◯が◯◯%改善",
+        s3_note2: "（例）◯◯が原因と推定",
+
+        s4_title: "今後（改善案 / 展開）",
+        s4_text: "次の改善と、共同研究としての展開をまとめます。",
+        s4_cap1: "図：ロードマップ / 改善計画",
+        s4_cap2: "画像：次の取り組み（イメージ）",
+        s4_note1: "（例）データ量拡張、UI改善",
+        s4_note2: "（例）授業での活用、公開デモ",
+
+        label_goal: "目的：",
+        label_hyp: "仮説：",
+        label_proc: "手順：",
+        label_eval: "評価：",
+        label_main: "主結果：",
+        label_disc: "考察：",
+        label_impr: "改善：",
+        label_next: "展開：",
 
         footer_text: "© Joint Research Project",
         footer_updated: "Last updated: 2025-12-22",
       },
 
-      // ✅ 日本語の文体に合わせた英語
       en: {
         page_title: "Japan–Korea Joint Research",
         site_title: "Japan–Korea Joint Research",
-        site_subtitle: "Two school overviews are shown side-by-side. Hover the buttons to see details.",
+        site_subtitle: "Two school overviews are shown side-by-side, and details appear when you hover the buttons.",
         pill_text: "Joint Research Showcase",
+        hero_hint_left: "Left: Korea (Gwangju Software Meister High School)",
+        hero_hint_right: "Right: Japan (Tokyo Metropolitan Science and Technology High School)",
 
         kr_badge: "Korea / School Overview",
         kr_school_name: "Gwangju Software Meister High School",
         kr_chip_location: "Location: Gwangju, Republic of Korea",
         kr_chip_field: "Field: Software / Information Technology",
-        kr_chip_team: "Members:",
+        kr_chip_team: "Members: (to be added)",
         kr_feature_1: "Specialized education focused on software",
         kr_feature_2: "Learning centered on practical development and building",
         kr_feature_3: "Emphasis on team development and presentations",
@@ -231,32 +417,69 @@
         role_title: "Role in the Joint Project",
         btn_research: "View Research",
         btn_members: "Members",
-
         tip_research_title: "Research Summary",
-        tip_research_text: "Organize topic, goals, methods, and results on one page. Charts go here. 📊",
+        tip_research_text: "Slides summarize goals → methods → results → discussion → next steps with diagrams and photos. 📊",
         tip_members_title: "Participants",
 
         section_research_title: "Research",
-        section_research_text: "Write: goals → methods → results → discussion → next steps. Charts go here. 📊",
+        section_research_text: "Slides summarize goals → methods → results → discussion → next steps with diagrams and photos. 📊",
         section_members_title: "Members",
         section_members_text: "Add participant information here.",
+
+        s1_title: "Research Topic",
+        s1_text: "Briefly describe the background and the topic.",
+        s1_cap1: "Diagram: overview (flow / concept / structure)",
+        s1_cap2: "Photo: experiment / building / measurement",
+        s1_note1: "(Example) Clarify ○○",
+        s1_note2: "(Example) If ○○, then ○○",
+
+        s2_title: "Method (Experiment / Implementation)",
+        s2_text: "Organize procedures, conditions, and technologies used.",
+        s2_cap1: "Diagram: procedure / system / evaluation design",
+        s2_cap2: "Photo: screenshots / work scene",
+        s2_note1: "(Example) 1… 2… 3…",
+        s2_note2: "(Example) accuracy / time / reproducibility",
+
+        s3_title: "Results (Graphs / Comparison)",
+        s3_text: "Show up to three key points from the results.",
+        s3_cap1: "Diagram: graphs, tables, comparisons",
+        s3_cap2: "Photo: outputs / result images",
+        s3_note1: "(Example) ○○ improved by ○○%",
+        s3_note2: "(Example) ○○ is considered the cause",
+
+        s4_title: "Next Steps (Improvements / Expansion)",
+        s4_text: "Summarize improvements and future collaboration plans.",
+        s4_cap1: "Diagram: roadmap / improvement plan",
+        s4_cap2: "Photo: next action (image)",
+        s4_note1: "(Example) more data, UI improvements",
+        s4_note2: "(Example) classroom use, public demo",
+
+        label_goal: "Goal: ",
+        label_hyp: "Hypothesis: ",
+        label_proc: "Procedure: ",
+        label_eval: "Evaluation: ",
+        label_main: "Main result: ",
+        label_disc: "Discussion: ",
+        label_impr: "Improvement: ",
+        label_next: "Expansion: ",
 
         footer_text: "© Joint Research Project",
         footer_updated: "Last updated: 2025-12-22",
       },
 
-      // ✅ 日本語の文体に合わせた韓国語
       ko: {
         page_title: "한일 공동연구",
         site_title: "한일 공동연구",
         site_subtitle: "양교 개요를 좌우로 배치하고, 버튼에 마우스를 올리면 상세가 표시됩니다.",
         pill_text: "Joint Research Showcase",
+        hero_hint_left: "왼쪽: 한국(광주 소프트웨어 마이스터 고등학교)",
+        hero_hint_right: "오른쪽: 일본(도쿄도립 과학기술 고등학교)",
 
         kr_badge: "Korea / 학교 개요",
         kr_school_name: "광주 소프트웨어 마이스터 고등학교",
         kr_chip_location: "지역: 광주광역시",
         kr_chip_field: "분야: 소프트웨어 / 정보",
-        kr_chip_team: "참여 멤버:",
+        kr_chip_team: "참여 멤버: (추후 추가)",
         kr_feature_1: "소프트웨어 분야에 특화된 전문 교육",
         kr_feature_2: "실습 중심의 개발·제작 학습",
         kr_feature_3: "팀 개발 및 발표 경험을 중시",
@@ -280,15 +503,51 @@
         role_title: "공동연구에서의 역할",
         btn_research: "연구 내용 보기",
         btn_members: "멤버",
-
         tip_research_title: "연구 요점",
-        tip_research_text: "주제·목표·방법·결과를 1페이지로 정리. 도표는 여기. 📊",
+        tip_research_text: "도표와 이미지로 목표→방법→결과→고찰→향후 계획을 슬라이드로 정리합니다. 📊",
         tip_members_title: "참여자",
 
         section_research_title: "연구 내용(Research)",
-        section_research_text: "목표→방법→결과→고찰→향후 계획 순으로 작성. 도표는 여기. 📊",
+        section_research_text: "도표와 이미지로 목표→방법→결과→고찰→향후 계획을 슬라이드로 정리합니다. 📊",
         section_members_title: "멤버(Members)",
         section_members_text: "참여자 정보를 여기에 추가합니다.",
+
+        s1_title: "연구 주제",
+        s1_text: "연구의 배경과 주제를 간단히 설명합니다.",
+        s1_cap1: "도표: 전체 구성(흐름/개념/구성도)",
+        s1_cap2: "이미지: 실험·제작·측정 모습",
+        s1_note1: "(예) ○○을 밝힌다",
+        s1_note2: "(예) ○○이면 ○○이다",
+
+        s2_title: "방법(실험 / 구현)",
+        s2_text: "절차·조건·사용 기술을 정리합니다.",
+        s2_cap1: "도표: 절차/시스템/평가 설계",
+        s2_cap2: "이미지: 화면 캡처/작업 모습",
+        s2_note1: "(예) ①… ②… ③…",
+        s2_note2: "(예) 정확도/시간/재현성",
+
+        s3_title: "결과(그래프 / 비교)",
+        s3_text: "결과의 핵심 포인트를 최대 3개로 정리합니다.",
+        s3_cap1: "도표: 그래프/표/비교도",
+        s3_cap2: "이미지: 산출물/결과 사진",
+        s3_note1: "(예) ○○이 ○○% 개선",
+        s3_note2: "(예) 원인은 ○○로 추정",
+
+        s4_title: "향후(개선안 / 전개)",
+        s4_text: "개선과 공동연구의 전개를 정리합니다.",
+        s4_cap1: "도표: 로드맵/개선 계획",
+        s4_cap2: "이미지: 다음 활동(이미지)",
+        s4_note1: "(예) 데이터 확장, UI 개선",
+        s4_note2: "(예) 수업 활용, 공개 데모",
+
+        label_goal: "목표: ",
+        label_hyp: "가설: ",
+        label_proc: "절차: ",
+        label_eval: "평가: ",
+        label_main: "주요 결과: ",
+        label_disc: "고찰: ",
+        label_impr: "개선: ",
+        label_next: "전개: ",
 
         footer_text: "© Joint Research Project",
         footer_updated: "Last updated: 2025-12-22",
@@ -330,6 +589,70 @@
       document.querySelectorAll(".lang-btn").forEach(btn => {
         btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
       });
+    })();
+
+    // ===== Research Slider（dots / arrows / keyboard / swipe）=====
+    (function(){
+      const root = document.querySelector("[data-slider]");
+      if(!root) return;
+
+      const slidesWrap = root.querySelector("[data-slides]");
+      const slides = Array.from(root.querySelectorAll("[data-slide]"));
+      const btnPrev = root.querySelector("[data-prev]");
+      const btnNext = root.querySelector("[data-next]");
+      const dotsWrap = root.querySelector("[data-dots]");
+
+      let index = Math.max(0, slides.findIndex(s => s.classList.contains("is-active")));
+      if(index < 0) index = 0;
+
+      dotsWrap.innerHTML = "";
+      const dots = slides.map((_, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "dot-btn";
+        b.setAttribute("aria-label", `Slide ${i+1}`);
+        b.addEventListener("click", () => go(i));
+        dotsWrap.appendChild(b);
+        return b;
+      });
+
+      function render(){
+        slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
+        dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+        btnPrev.disabled = slides.length <= 1;
+        btnNext.disabled = slides.length <= 1;
+      }
+
+      function go(i){
+        index = (i + slides.length) % slides.length;
+        render();
+      }
+
+      btnPrev.addEventListener("click", () => go(index - 1));
+      btnNext.addEventListener("click", () => go(index + 1));
+
+      window.addEventListener("keydown", (e) => {
+        if(document.activeElement && ["INPUT","TEXTAREA","SELECT"].includes(document.activeElement.tagName)) return;
+        if(e.key === "ArrowLeft") go(index - 1);
+        if(e.key === "ArrowRight") go(index + 1);
+      });
+
+      let startX = null;
+      slidesWrap.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+      }, {passive:true});
+
+      slidesWrap.addEventListener("touchend", (e) => {
+        if(startX === null) return;
+        const endX = e.changedTouches[0].clientX;
+        const dx = endX - startX;
+        startX = null;
+        if(Math.abs(dx) < 40) return;
+        if(dx > 0) go(index - 1);
+        else go(index + 1);
+      }, {passive:true});
+
+      render();
     })();
   </script>
 </body>
