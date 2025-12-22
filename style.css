@@ -1,7 +1,6 @@
 :root{
   --bg: #0b0f1a;
   --card: rgba(255,255,255,.08);
-  --card2: rgba(255,255,255,.06);
   --text: rgba(255,255,255,.92);
   --muted: rgba(255,255,255,.70);
   --line: rgba(255,255,255,.12);
@@ -18,8 +17,8 @@ body{
   font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
   background:
-    radial-gradient(900px 500px at 18% 20%, rgba(255,77,77,.20), transparent 55%),
-    radial-gradient(900px 500px at 82% 20%, rgba(77,124,255,.22), transparent 55%),
+    radial-gradient(900px 500px at 18% 20%, rgba(77,124,255,.22), transparent 55%),
+    radial-gradient(900px 500px at 82% 20%, rgba(255,77,77,.20), transparent 55%),
     radial-gradient(700px 700px at 50% 90%, rgba(255,255,255,.08), transparent 60%),
     var(--bg);
   min-height: 100svh;
@@ -33,7 +32,8 @@ a{ color: inherit; text-decoration: none; }
   padding: 28px 18px 40px;
 }
 
-header{
+/* ===== ヘッダー ===== */
+.topbar{
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
@@ -42,7 +42,7 @@ header{
 }
 
 .title{
-  line-height:1.2;
+  line-height:1.25;
 }
 
 .title h1{
@@ -55,6 +55,13 @@ header{
   margin:8px 0 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.topbar-right{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap: 10px;
 }
 
 .pill{
@@ -72,10 +79,44 @@ header{
 
 .dot{
   width:10px;height:10px;border-radius:50%;
-  background: linear-gradient(90deg, var(--jp), var(--kr));
+  background: linear-gradient(90deg, var(--kr), var(--jp));
   box-shadow: 0 0 18px rgba(255,255,255,.18);
 }
 
+/* ✅ 言語スイッチ */
+.lang-switch{
+  display:flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.05);
+}
+
+.lang-btn{
+  appearance:none;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(255,255,255,.82);
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .12s ease, transform .12s ease, border-color .12s ease;
+}
+
+.lang-btn:hover{
+  background: rgba(255,255,255,.08);
+  transform: translateY(-1px);
+}
+
+.lang-btn.active{
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.18);
+  color: rgba(255,255,255,.94);
+}
+
+/* ===== レイアウト ===== */
 .grid{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -103,6 +144,7 @@ header{
   height: 260px;
   border-radius: 50%;
   opacity:.45;
+  pointer-events:none;
 }
 
 .card.jp::before{
@@ -178,6 +220,7 @@ ul{
   line-height: 1.7;
 }
 
+/* ===== ボタン ===== */
 .actions{
   display:flex;
   gap: 10px;
@@ -208,6 +251,88 @@ ul{
 .btn.jp{ border-color: rgba(255,77,77,.35); }
 .btn.kr{ border-color: rgba(77,124,255,.35); }
 
+/* ===== ホバー詳細（tooltip） ===== */
+.hover-wrap{
+  position: relative;
+  display: inline-block;
+}
+
+.hover-detail{
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  min-width: 230px;
+  max-width: 320px;
+
+  background: rgba(20,20,30,.92);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.6;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 20;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.hover-detail::after{
+  content:"";
+  position:absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 7px solid transparent;
+  border-top-color: rgba(20,20,30,.92);
+}
+
+.hover-detail strong{
+  display:block;
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.hover-detail p{
+  margin:0;
+  color: var(--muted);
+}
+
+.hover-detail.jp{ border-color: rgba(255,77,77,.35); }
+.hover-detail.kr{ border-color: rgba(77,124,255,.35); }
+
+.hover-wrap:hover .hover-detail{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===== 下のセクション ===== */
+.below{
+  margin-top: 18px;
+  padding: 16px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.05);
+}
+
+.below h2{
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.below-muted{
+  margin:0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 footer{
   margin-top: 18px;
   color: var(--muted);
@@ -216,9 +341,37 @@ footer{
   opacity:.85;
 }
 
-/* スマホは縦並び */
+.sep{ opacity:.55; }
+
+/* ===== レスポンシブ ===== */
 @media (max-width: 860px){
-  header{ flex-direction: column; }
+  .topbar{ flex-direction: column; }
+  .topbar-right{ align-items:flex-start; }
   .grid{ grid-template-columns: 1fr; }
   .card{ min-height: auto; }
+
+  .hover-detail{
+    left: 0;
+    transform: translateX(0) translateY(6px);
+  }
+  .hover-wrap:hover .hover-detail{
+    transform: translateX(0) translateY(0);
+  }
+  .hover-detail::after{
+    left: 18px;
+    transform: translateX(0);
+  }
+}
+
+/* ホバー不可（スマホ等）では詳細をボタン下に常時表示 */
+@media (hover: none){
+  .hover-detail{
+    position: static;
+    transform: none;
+    opacity: 1;
+    margin-top: 8px;
+    pointer-events: auto;
+    max-width: none;
+  }
+  .hover-detail::after{ display:none; }
 }
