@@ -19,7 +19,6 @@
       <div class="topbar-right">
         <div class="pill"><span class="dot"></span> <span data-i18n="pill_text">Joint Research Showcase</span></div>
 
-        <!-- ✅ 言語切り替え -->
         <nav class="lang-switch" aria-label="Language switch">
           <button class="lang-btn" data-lang="ja" type="button">日本語</button>
           <button class="lang-btn" data-lang="en" type="button">English</button>
@@ -36,7 +35,7 @@
 
         <div class="meta">
           <span class="chip" data-i18n="kr_chip_location">所在地：</span>
-          <span class="chip" data-i18n="kr_chip_field">分野：例）Science / Engineering</span>
+          <span class="chip" data-i18n="kr_chip_field">分野：Science / Engineering</span>
           <span class="chip" data-i18n="kr_chip_team">参加メンバー：</span>
         </div>
 
@@ -70,9 +69,8 @@
             <a class="btn" href="#members" data-i18n="btn_members">メンバー</a>
             <div class="hover-detail">
               <strong data-i18n="tip_members_title">参加者</strong>
-              <p data-i18n="tip_members_text">name</p>
+              <p data-i18n="kr_members_names">（ここを書き換え）</p>
             </div>
-          </div>
           </div>
         </div>
       </section>
@@ -110,7 +108,7 @@
             <a class="btn jp" href="#research" data-i18n="btn_research">研究内容を見る</a>
             <div class="hover-detail jp">
               <strong data-i18n="tip_research_title">研究の要点</strong>
-              <p data-i18n="tip_research_text">研究の見せ方を整えて「伝わる」構成に。成果の一覧もここ。📌</p>
+              <p data-i18n="tip_research_text">テーマ・目的・方法・結果を1ページで整理。図表の導入もここ。📊</p>
             </div>
           </div>
 
@@ -118,19 +116,19 @@
             <a class="btn" href="#members" data-i18n="btn_members">メンバー</a>
             <div class="hover-detail">
               <strong data-i18n="tip_members_title">参加者</strong>
-              <p data-i18n="tip_members_text">鈴鹿泰正、島村真央</p>
+              <p data-i18n="jp_members_names">鈴鹿泰正、島村真央</p>
             </div>
-          </div>
-
           </div>
         </div>
       </section>
     </main>
 
-    <!-- 下のセクション -->
+    <!-- 下のセクション（今は research だけ） -->
     <section id="research" class="below">
       <h2 data-i18n="section_research_title">研究内容（Research）</h2>
-      <p class="below-muted" data-i18n="section_research_text">ここに「目的→方法→結果→考察→今後」を入れていく。図表を置くならここ。📊</p>
+      <p class="below-muted" data-i18n="section_research_text">
+        ここに「目的→方法→結果→考察→今後」を入れていく。図表を置くならここ。📊
+      </p>
     </section>
 
     <footer>
@@ -140,160 +138,144 @@
     </footer>
   </div>
 
-  <!-- ✅ 言語切り替えスクリプト（このページだけで完結） -->
   <script>
+    // ✅ 使ってる data-i18n だけ残した最小辞書（不要キー全削除）
     const I18N = {
       ja: {
-        site_title: "日韓共同研究 成果サイト 🇯🇵🤝🇰🇷",
+        page_title: "日韓共同研究",
+        site_title: "日韓共同研究",
         site_subtitle: "左右に両校の概要を並べ、ボタンにホバーで詳細が表示されます。",
         pill_text: "Joint Research Showcase",
 
         kr_badge: "Korea / 高校概要",
         kr_school_name: "韓国側の高校名（ここを書き換え）",
-        kr_chip_location: "所在地：例）Seoul",
-        kr_chip_field: "分野：例）Science / Engineering",
-        kr_chip_team: "参加チーム：例）2 teams",
+        kr_chip_location: "所在地：",
+        kr_chip_field: "分野：Science / Engineering",
+        kr_chip_team: "参加メンバー：",
         kr_feature_1: "例）理数・工学系の探究が強い",
         kr_feature_2: "例）研究発表・コンテスト参加が活発",
         kr_feature_3: "例）国際交流プログラムの実績",
         kr_role_1: "例）データ収集 / 実験設計 / 検証",
         kr_role_2: "例）成果物：レポート、分析結果、発表資料",
+        kr_members_names: "（ここを書き換え）",
 
         jp_badge: "Japan / 高校概要",
-        jp_school_name: "日本側の高校名（ここを書き換え）",
-        jp_chip_location: "所在地：例）Tokyo",
-        jp_chip_field: "分野：例）Science & Tech",
-        jp_chip_team: "参加チーム：例）1 team",
+        jp_school_name: "都立科学技術高等学校",
+        jp_chip_location: "所在地：Tokyo",
+        jp_chip_field: "分野：Science & Tech",
+        jp_chip_team: "参加メンバー：鈴鹿泰正、島村真央",
         jp_feature_1: "例）探究・課題研究中心のカリキュラム",
         jp_feature_2: "例）制作（Web / アプリ / 実験）に強い",
         jp_feature_3: "例）外部発表・地域連携の実績",
         jp_role_1: "例）Web実装 / UI設計 / 可視化 / まとめ",
         jp_role_2: "例）成果物：Web、動画、展示ポスター",
+        jp_members_names: "鈴鹿泰正、島村真央",
 
         features_title: "学校の特徴",
         role_title: "共同研究での役割",
-
         btn_research: "研究内容を見る",
         btn_members: "メンバー",
-        btn_contact: "連絡",
 
         tip_research_title: "研究の要点",
         tip_research_text: "テーマ・目的・方法・結果を1ページで整理。図表の導入もここ。📊",
         tip_members_title: "参加者",
-        tip_members_text: "生徒・指導教員・協力機関（必要なら）を簡潔に掲載。👥",
-        tip_contact_title: "問い合わせ",
-        tip_contact_text: "外部公開ならメールは画像化かフォームが安全。✉️🔒",
 
         section_research_title: "研究内容（Research）",
         section_research_text: "ここに「目的→方法→結果→考察→今後」を入れていく。図表を置くならここ。📊",
-        section_members_title: "メンバー（Members）",
-        section_members_text: "役割（例：実験、解析、実装、発表）を並べると強い。👥",
-        section_contact_title: "連絡（Contact）",
-        section_contact_text: "外部公開ならフォームが安全。学校窓口や担当の案内をここに。✉️",
 
         footer_text: "© Joint Research Project",
         footer_updated: "Last updated: 2025-12-22",
       },
 
+      // ✅ 日本語の“型”に合わせた英語（Example: みたいなノリは消した）
       en: {
-        site_title: "Japan–Korea Joint Research Showcase 🇯🇵🤝🇰🇷",
-        site_subtitle: "Two school overviews side-by-side. Hover buttons to see quick details.",
+        page_title: "Japan–Korea Joint Research",
+        site_title: "Japan–Korea Joint Research",
+        site_subtitle: "Two school overviews are shown side-by-side. Hover the buttons to see details.",
         pill_text: "Joint Research Showcase",
 
         kr_badge: "Korea / School Overview",
         kr_school_name: "Korean High School Name (edit here)",
-        kr_chip_location: "Location: e.g., Seoul",
-        kr_chip_field: "Field: e.g., Science / Engineering",
-        kr_chip_team: "Teams: e.g., 2 teams",
-        kr_feature_1: "Example: Strong STEM research culture",
-        kr_feature_2: "Example: Active in presentations & competitions",
-        kr_feature_3: "Example: Experience in international programs",
-        kr_role_1: "Example: Data collection / experiment design / validation",
-        kr_role_2: "Example: Outputs: report, analysis, slides",
+        kr_chip_location: "Location:",
+        kr_chip_field: "Field: Science / Engineering",
+        kr_chip_team: "Members:",
+        kr_feature_1: "STEM-focused inquiry and research activities",
+        kr_feature_2: "Active presentations and contest participation",
+        kr_feature_3: "Experience with international programs",
+        kr_role_1: "Data collection / experiment design / validation",
+        kr_role_2: "Outputs: report, analysis results, presentation slides",
+        kr_members_names: "(edit here)",
 
         jp_badge: "Japan / School Overview",
-        jp_school_name: "Japanese High School Name (edit here)",
-        jp_chip_location: "Location: e.g., Tokyo",
-        jp_chip_field: "Field: e.g., Science & Tech",
-        jp_chip_team: "Teams: e.g., 1 team",
-        jp_feature_1: "Example: Project-based research curriculum",
-        jp_feature_2: "Example: Strong in building (Web / apps / experiments)",
-        jp_feature_3: "Example: Track record of external presentations",
-        jp_role_1: "Example: Web implementation / UI / visualization / summary",
-        jp_role_2: "Example: Outputs: website, video, poster",
+        jp_school_name: "Tokyo Metropolitan Science and Technology High School",
+        jp_chip_location: "Location: Tokyo",
+        jp_chip_field: "Field: Science & Tech",
+        jp_chip_team: "Members: Taisei Suzuka, Mao Shimamura",
+        jp_feature_1: "Curriculum centered on inquiry and project-based research",
+        jp_feature_2: "Strong in building (Web / apps / experiments)",
+        jp_feature_3: "Track record of external presentations and collaborations",
+        jp_role_1: "Web implementation / UI design / visualization / documentation",
+        jp_role_2: "Outputs: website, video, exhibition poster",
+        jp_members_names: "Taisei Suzuka, Mao Shimamura",
 
-        features_title: "Key Features",
+        features_title: "School Features",
         role_title: "Role in the Joint Project",
-
         btn_research: "View Research",
         btn_members: "Members",
-        btn_contact: "Contact",
 
-        tip_research_title: "Quick Summary",
-        tip_research_text: "One-page overview: topic, goals, methods, results. Great place for charts. 📊",
-        tip_members_title: "Who’s Involved",
-        tip_members_text: "List students, advisors, and partners (if any) clearly. 👥",
-        tip_contact_title: "Get in Touch",
-        tip_contact_text: "For public sites, a form is safer than plain email. ✉️🔒",
+        tip_research_title: "Research Summary",
+        tip_research_text: "Organize topic, goals, methods, and results on one page. Charts go here. 📊",
+        tip_members_title: "Participants",
 
         section_research_title: "Research",
-        section_research_text: "Add: goals → methods → results → discussion → next steps. Charts go here. 📊",
-        section_members_title: "Members",
-        section_members_text: "Show roles (experiment / analysis / dev / presentation) for clarity. 👥",
-        section_contact_title: "Contact",
-        section_contact_text: "A contact form is recommended for public pages. ✉️",
+        section_research_text: "Write: goals → methods → results → discussion → next steps. Charts go here. 📊",
 
         footer_text: "© Joint Research Project",
         footer_updated: "Last updated: 2025-12-22",
       },
 
+      // ✅ 日本語の“型”に合わせた韓国語（불필요한 톤 제거）
       ko: {
-        site_title: "한일 공동연구 성과 사이트 🇯🇵🤝🇰🇷",
+        page_title: "한일 공동연구",
+        site_title: "한일 공동연구",
         site_subtitle: "양교 개요를 좌우로 배치하고, 버튼에 마우스를 올리면 상세가 표시됩니다.",
         pill_text: "Joint Research Showcase",
 
         kr_badge: "Korea / 학교 개요",
         kr_school_name: "한국 측 고등학교 이름(여기 수정)",
-        kr_chip_location: "지역: 예) Seoul",
-        kr_chip_field: "분야: 예) Science / Engineering",
-        kr_chip_team: "참여 팀: 예) 2 teams",
-        kr_feature_1: "예) 이공계 탐구/연구 활동이 활발",
-        kr_feature_2: "예) 발표·대회 참가가 활발",
-        kr_feature_3: "예) 국제교류 프로그램 경험",
-        kr_role_1: "예) 데이터 수집 / 실험 설계 / 검증",
-        kr_role_2: "예) 산출물: 보고서, 분석 결과, 발표자료",
+        kr_chip_location: "지역:",
+        kr_chip_field: "분야: Science / Engineering",
+        kr_chip_team: "참여 멤버:",
+        kr_feature_1: "이공계 중심의 탐구·연구 활동",
+        kr_feature_2: "발표 및 대회 참여가 활발",
+        kr_feature_3: "국제 교류 프로그램 경험",
+        kr_role_1: "데이터 수집 / 실험 설계 / 검증",
+        kr_role_2: "산출물: 보고서, 분석 결과, 발표자료",
+        kr_members_names: "(여기 수정)",
 
         jp_badge: "Japan / 학교 개요",
-        jp_school_name: "일본 측 고등학교 이름(여기 수정)",
-        jp_chip_location: "지역: 예) Tokyo",
-        jp_chip_field: "분야: 예) Science & Tech",
-        jp_chip_team: "참여 팀: 예) 1 team",
-        jp_feature_1: "예) 프로젝트 기반 탐구 중심 커리큘럼",
-        jp_feature_2: "예) 제작(Web/앱/실험)에 강점",
-        jp_feature_3: "예) 외부 발표·연계 실적",
-        jp_role_1: "예) Web 구현 / UI 설계 / 시각화 / 정리",
-        jp_role_2: "예) 산출물: 웹사이트, 영상, 포스터",
+        jp_school_name: "도쿄도립 과학기술 고등학교",
+        jp_chip_location: "지역: Tokyo",
+        jp_chip_field: "분야: Science & Tech",
+        jp_chip_team: "참여 멤버: 스즈카 타이세이, 시마무라 마오",
+        jp_feature_1: "탐구·프로젝트 기반 연구 중심 커리큘럼",
+        jp_feature_2: "제작(Web / 앱 / 실험)에 강점",
+        jp_feature_3: "외부 발표 및 연계 실적",
+        jp_role_1: "Web 구현 / UI 설계 / 시각화 / 정리",
+        jp_role_2: "산출물: 웹사이트, 영상, 전시 포스터",
+        jp_members_names: "스즈카 타이세이, 시마무라 마오",
 
         features_title: "학교 특징",
         role_title: "공동연구에서의 역할",
-
         btn_research: "연구 내용 보기",
         btn_members: "멤버",
-        btn_contact: "연락",
 
-        tip_research_title: "요약",
-        tip_research_text: "주제·목표·방법·결과를 1페이지로 정리. 도표도 여기. 📊",
+        tip_research_title: "연구 요점",
+        tip_research_text: "주제·목표·방법·결과를 1페이지로 정리. 도표는 여기. 📊",
         tip_members_title: "참여자",
-        tip_members_text: "학생/지도교사/협력기관(필요 시)을 간단히 소개. 👥",
-        tip_contact_title: "문의",
-        tip_contact_text: "공개 사이트라면 이메일 직접 공개보다 폼이 안전. ✉️🔒",
 
         section_research_title: "연구 내용(Research)",
         section_research_text: "목표→방법→결과→고찰→향후 계획 순으로 작성. 도표는 여기. 📊",
-        section_members_title: "멤버(Members)",
-        section_members_text: "역할(실험/분석/개발/발표)을 적으면 더 명확해요. 👥",
-        section_contact_title: "연락(Contact)",
-        section_contact_text: "공개 페이지는 연락 폼을 추천. 담당/창구 안내를 여기에. ✉️",
 
         footer_text: "© Joint Research Project",
         footer_updated: "Last updated: 2025-12-22",
@@ -304,22 +286,20 @@
       const dict = I18N[lang] || I18N.ja;
 
       document.documentElement.lang = lang;
+      document.title = dict.page_title || dict.site_title || "日韓共同研究";
 
       document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
         if (dict[key] !== undefined) el.textContent = dict[key];
       });
 
-      // active ボタン表示
       document.querySelectorAll(".lang-btn").forEach(btn => {
         btn.classList.toggle("active", btn.dataset.lang === lang);
       });
 
-      // 保存（次回も同じ言語）
       try { localStorage.setItem("lang", lang); } catch (_) {}
     }
 
-    // 初期言語：保存 > ブラウザ > 日本語
     (function initLang(){
       let lang = "ja";
       try {
