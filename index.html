@@ -31,28 +31,28 @@
       <!-- 左：韓国 -->
       <section class="card kr" aria-label="Korean High School Overview">
         <div class="badge"><span class="flag">🇰🇷</span> <span data-i18n="kr_badge">Korea / 高校概要</span></div>
-        <h2 data-i18n="kr_school_name">韓国側の高校名（ここを書き換え）</h2>
+        <h2 data-i18n="kr_school_name"><a href="https://www.metro.ed.jp/kagakugijyutu-h/">光州ソフトウェアマイスター高校</a></h2>
 
         <div class="meta">
-          <span class="chip" data-i18n="kr_chip_location">所在地：</span>
-          <span class="chip" data-i18n="kr_chip_field">分野：Science / Engineering</span>
+          <span class="chip" data-i18n="kr_chip_location">所在地：光州広域市</span>
+          <span class="chip" data-i18n="kr_chip_field">分野：ソフトウェア / 情報</span>
           <span class="chip" data-i18n="kr_chip_team">参加メンバー：</span>
         </div>
 
         <div class="section">
           <h3 data-i18n="features_title">学校の特徴</h3>
           <ul>
-            <li data-i18n="kr_feature_1">例）理数・工学系の探究が強い</li>
-            <li data-i18n="kr_feature_2">例）研究発表・コンテスト参加が活発</li>
-            <li data-i18n="kr_feature_3">例）国際交流プログラムの実績</li>
+            <li data-i18n="kr_feature_1">ソフトウェア分野に特化した専門教育</li>
+            <li data-i18n="kr_feature_2">実践的な開発・制作を中心とした学習</li>
+            <li data-i18n="kr_feature_3">チーム開発・発表活動の経験を重視</li>
           </ul>
         </div>
 
         <div class="section">
           <h3 data-i18n="role_title">共同研究での役割</h3>
           <ul>
-            <li data-i18n="kr_role_1">例）データ収集 / 実験設計 / 検証</li>
-            <li data-i18n="kr_role_2">例）成果物：レポート、分析結果、発表資料</li>
+            <li data-i18n="kr_role_1">データ収集 / 設計・検証 / 共同発表の準備</li>
+            <li data-i18n="kr_role_2">成果物：レポート、分析結果、発表資料</li>
           </ul>
         </div>
 
@@ -69,7 +69,7 @@
             <a class="btn" href="#members" data-i18n="btn_members">メンバー</a>
             <div class="hover-detail">
               <strong data-i18n="tip_members_title">参加者</strong>
-              <p data-i18n="kr_members_names">（ここを書き換え）</p>
+              <p data-i18n="kr_members_names">（メンバー確定後に追記）</p>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
       <!-- 右：日本 -->
       <section class="card jp" aria-label="Japanese High School Overview">
         <div class="badge"><span class="flag">🇯🇵</span> <span data-i18n="jp_badge">Japan / 高校概要</span></div>
-        <h2 data-i18n="jp_school_name">都立科学技術高等学校</h2>
+        <h2 data-i18n="jp_school_name"><a href="https://www.metro.ed.jp/kagakugijyutu-h/">都立科学技術高等学校</a></h2>
 
         <div class="meta">
           <span class="chip" data-i18n="jp_chip_location">所在地：Tokyo</span>
@@ -89,17 +89,18 @@
         <div class="section">
           <h3 data-i18n="features_title">学校の特徴</h3>
           <ul>
-            <li data-i18n="jp_feature_1">例）探究・課題研究中心のカリキュラム</li>
-            <li data-i18n="jp_feature_2">例）制作（Web / アプリ / 実験）に強い</li>
-            <li data-i18n="jp_feature_3">例）外部発表・地域連携の実績</li>
+            <li data-i18n="jp_feature_1">探究・課題研究中心のカリキュラム</li>
+            <li data-i18n="jp_feature_2">制作（Web / アプリ / 実験）に強い</li>
+            <li data-i18n="jp_feature_3">外部発表・地域連携の実績</li>
           </ul>
         </div>
 
         <div class="section">
           <h3 data-i18n="role_title">共同研究での役割</h3>
           <ul>
-            <li data-i18n="jp_role_1">例）Web実装 / UI設計 / 可視化 / まとめ</li>
-            <li data-i18n="jp_role_2">例）成果物：Web、動画、展示ポスター</li>
+            <li data-i18n="jp_role_1">Web実装 / UI設計 / 可視化 / まとめ</li>
+ 
+            <li data-i18n="jp_role_2">成果物：Web、動画、展示ポスター</li>
           </ul>
         </div>
 
@@ -123,12 +124,18 @@
       </section>
     </main>
 
-    <!-- 下のセクション（今は research だけ） -->
+    <!-- 下のセクション -->
     <section id="research" class="below">
       <h2 data-i18n="section_research_title">研究内容（Research）</h2>
       <p class="below-muted" data-i18n="section_research_text">
         ここに「目的→方法→結果→考察→今後」を入れていく。図表を置くならここ。📊
       </p>
+    </section>
+
+    <!-- ひとまずアンカー先だけ確保（必要になったら中身を書く） -->
+    <section id="members" class="below">
+      <h2 data-i18n="section_members_title">メンバー（Members）</h2>
+      <p class="below-muted" data-i18n="section_members_text">参加者情報をここに追加します。</p>
     </section>
 
     <footer>
@@ -139,7 +146,7 @@
   </div>
 
   <script>
-    // ✅ 使ってる data-i18n だけ残した最小辞書（不要キー全削除）
+    // ✅ data-i18n で使ってるキーだけの最小辞書（不要キーは削除済み）
     const I18N = {
       ja: {
         page_title: "日韓共同研究",
@@ -148,27 +155,27 @@
         pill_text: "Joint Research Showcase",
 
         kr_badge: "Korea / 高校概要",
-        kr_school_name: "韓国側の高校名（ここを書き換え）",
-        kr_chip_location: "所在地：",
-        kr_chip_field: "分野：Science / Engineering",
+        kr_school_name: "光州ソフトウェアマイスター高校",
+        kr_chip_location: "所在地：光州広域市",
+        kr_chip_field: "分野：ソフトウェア / 情報",
         kr_chip_team: "参加メンバー：",
-        kr_feature_1: "例）理数・工学系の探究が強い",
-        kr_feature_2: "例）研究発表・コンテスト参加が活発",
-        kr_feature_3: "例）国際交流プログラムの実績",
-        kr_role_1: "例）データ収集 / 実験設計 / 検証",
-        kr_role_2: "例）成果物：レポート、分析結果、発表資料",
-        kr_members_names: "（ここを書き換え）",
+        kr_feature_1: "ソフトウェア分野に特化した専門教育",
+        kr_feature_2: "実践的な開発・制作を中心とした学習",
+        kr_feature_3: "チーム開発・発表活動の経験を重視",
+        kr_role_1: "データ収集 / 設計・検証 / 共同発表の準備",
+        kr_role_2: "成果物：レポート、分析結果、発表資料",
+        kr_members_names: "（メンバー確定後に追記）",
 
         jp_badge: "Japan / 高校概要",
         jp_school_name: "都立科学技術高等学校",
         jp_chip_location: "所在地：Tokyo",
         jp_chip_field: "分野：Science & Tech",
         jp_chip_team: "参加メンバー：鈴鹿泰正、島村真央",
-        jp_feature_1: "例）探究・課題研究中心のカリキュラム",
-        jp_feature_2: "例）制作（Web / アプリ / 実験）に強い",
-        jp_feature_3: "例）外部発表・地域連携の実績",
-        jp_role_1: "例）Web実装 / UI設計 / 可視化 / まとめ",
-        jp_role_2: "例）成果物：Web、動画、展示ポスター",
+        jp_feature_1: "探究・課題研究中心のカリキュラム",
+        jp_feature_2: "制作（Web / アプリ / 実験）に強い",
+        jp_feature_3: "外部発表・地域連携の実績",
+        jp_role_1: "Web実装 / UI設計 / 可視化 / まとめ",
+        jp_role_2: "成果物：Web、動画、展示ポスター",
         jp_members_names: "鈴鹿泰正、島村真央",
 
         features_title: "学校の特徴",
@@ -182,12 +189,14 @@
 
         section_research_title: "研究内容（Research）",
         section_research_text: "ここに「目的→方法→結果→考察→今後」を入れていく。図表を置くならここ。📊",
+        section_members_title: "メンバー（Members）",
+        section_members_text: "参加者情報をここに追加します。",
 
         footer_text: "© Joint Research Project",
         footer_updated: "Last updated: 2025-12-22",
       },
 
-      // ✅ 日本語の“型”に合わせた英語（Example: みたいなノリは消した）
+      // ✅ 日本語の文体に合わせた英語
       en: {
         page_title: "Japan–Korea Joint Research",
         site_title: "Japan–Korea Joint Research",
@@ -195,23 +204,23 @@
         pill_text: "Joint Research Showcase",
 
         kr_badge: "Korea / School Overview",
-        kr_school_name: "Korean High School Name (edit here)",
-        kr_chip_location: "Location:",
-        kr_chip_field: "Field: Science / Engineering",
+        kr_school_name: "Gwangju Software Meister High School",
+        kr_chip_location: "Location: Gwangju, Republic of Korea",
+        kr_chip_field: "Field: Software / Information Technology",
         kr_chip_team: "Members:",
-        kr_feature_1: "STEM-focused inquiry and research activities",
-        kr_feature_2: "Active presentations and contest participation",
-        kr_feature_3: "Experience with international programs",
-        kr_role_1: "Data collection / experiment design / validation",
+        kr_feature_1: "Specialized education focused on software",
+        kr_feature_2: "Learning centered on practical development and building",
+        kr_feature_3: "Emphasis on team development and presentations",
+        kr_role_1: "Data collection / design & validation / joint presentation preparation",
         kr_role_2: "Outputs: report, analysis results, presentation slides",
-        kr_members_names: "(edit here)",
+        kr_members_names: "(to be added)",
 
         jp_badge: "Japan / School Overview",
         jp_school_name: "Tokyo Metropolitan Science and Technology High School",
         jp_chip_location: "Location: Tokyo",
         jp_chip_field: "Field: Science & Tech",
         jp_chip_team: "Members: Taisei Suzuka, Mao Shimamura",
-        jp_feature_1: "Curriculum centered on inquiry and project-based research",
+        jp_feature_1: "Curriculum centered on inquiry and research projects",
         jp_feature_2: "Strong in building (Web / apps / experiments)",
         jp_feature_3: "Track record of external presentations and collaborations",
         jp_role_1: "Web implementation / UI design / visualization / documentation",
@@ -229,12 +238,14 @@
 
         section_research_title: "Research",
         section_research_text: "Write: goals → methods → results → discussion → next steps. Charts go here. 📊",
+        section_members_title: "Members",
+        section_members_text: "Add participant information here.",
 
         footer_text: "© Joint Research Project",
         footer_updated: "Last updated: 2025-12-22",
       },
 
-      // ✅ 日本語の“型”に合わせた韓国語（불필요한 톤 제거）
+      // ✅ 日本語の文体に合わせた韓国語
       ko: {
         page_title: "한일 공동연구",
         site_title: "한일 공동연구",
@@ -242,23 +253,23 @@
         pill_text: "Joint Research Showcase",
 
         kr_badge: "Korea / 학교 개요",
-        kr_school_name: "한국 측 고등학교 이름(여기 수정)",
-        kr_chip_location: "지역:",
-        kr_chip_field: "분야: Science / Engineering",
+        kr_school_name: "광주 소프트웨어 마이스터 고등학교",
+        kr_chip_location: "지역: 광주광역시",
+        kr_chip_field: "분야: 소프트웨어 / 정보",
         kr_chip_team: "참여 멤버:",
-        kr_feature_1: "이공계 중심의 탐구·연구 활동",
-        kr_feature_2: "발표 및 대회 참여가 활발",
-        kr_feature_3: "국제 교류 프로그램 경험",
-        kr_role_1: "데이터 수집 / 실험 설계 / 검증",
+        kr_feature_1: "소프트웨어 분야에 특화된 전문 교육",
+        kr_feature_2: "실습 중심의 개발·제작 학습",
+        kr_feature_3: "팀 개발 및 발표 경험을 중시",
+        kr_role_1: "데이터 수집 / 설계·검증 / 공동 발표 준비",
         kr_role_2: "산출물: 보고서, 분석 결과, 발표자료",
-        kr_members_names: "(여기 수정)",
+        kr_members_names: "(추후 추가)",
 
         jp_badge: "Japan / 학교 개요",
         jp_school_name: "도쿄도립 과학기술 고등학교",
         jp_chip_location: "지역: Tokyo",
         jp_chip_field: "분야: Science & Tech",
         jp_chip_team: "참여 멤버: 스즈카 타이세이, 시마무라 마오",
-        jp_feature_1: "탐구·프로젝트 기반 연구 중심 커리큘럼",
+        jp_feature_1: "탐구·연구 프로젝트 중심 커리큘럼",
         jp_feature_2: "제작(Web / 앱 / 실험)에 강점",
         jp_feature_3: "외부 발표 및 연계 실적",
         jp_role_1: "Web 구현 / UI 설계 / 시각화 / 정리",
@@ -276,6 +287,8 @@
 
         section_research_title: "연구 내용(Research)",
         section_research_text: "목표→방법→결과→고찰→향후 계획 순으로 작성. 도표는 여기. 📊",
+        section_members_title: "멤버(Members)",
+        section_members_text: "참여자 정보를 여기에 추가합니다.",
 
         footer_text: "© Joint Research Project",
         footer_updated: "Last updated: 2025-12-22",
