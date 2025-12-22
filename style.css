@@ -37,7 +37,7 @@ a{ color: inherit; text-decoration: none; }
   padding: 22px 18px 40px;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO（トップバー背景を左右コラージュ）===== */
 .hero{
   position: relative;
   border-radius: 22px;
@@ -46,6 +46,7 @@ a{ color: inherit; text-decoration: none; }
   border: 1px solid rgba(255,255,255,.10);
 }
 
+/* 背景：左右分割 */
 .hero-bg{
   position: absolute;
   inset: 0;
@@ -65,24 +66,19 @@ a{ color: inherit; text-decoration: none; }
   background-position: center;
 }
 
+/* 黒グラデで文字を読みやすく */
 .hero::after{
   content:"";
   position:absolute;
   inset:0;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,.70), rgba(0,0,0,.55));
+  background: linear-gradient(to bottom, rgba(0,0,0,.70), rgba(0,0,0,.55));
 }
 
-.hero-content{
+/* ✅ あなたのHTMLは .topbar-inner なので合わせる */
+.topbar-inner{
   position: relative;
   z-index: 1;
   padding: 34px 28px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.hero-top{
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
@@ -161,23 +157,6 @@ a{ color: inherit; text-decoration: none; }
   background: rgba(255,255,255,.16);
   border-color: rgba(255,255,255,.22);
   color: rgba(255,255,255,.96);
-}
-
-.hero-hint{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.hint-chip{
-  display:inline-flex;
-  align-items:center;
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(0,0,0,.18);
-  color: rgba(255,255,255,.82);
-  font-size: 16px;
 }
 
 /* ===== GRID ===== */
@@ -398,69 +377,15 @@ ul{
   line-height: 1.7;
 }
 
-footer{
-  margin-top: 18px;
-  color: var(--muted);
-  font-size: 16px;
-  text-align:center;
-  opacity:.85;
-}
-
-.sep{ opacity:.55; }
-
-/* ===== Research Slider ===== */
-.research{ padding: 18px; }
-.research-head{ margin-bottom: 14px; }
-
-.slider{
-  position: relative;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(255,255,255,.04);
-  overflow: hidden;
-}
-
-.slide{
-  display: none;
-  padding: 18px;
-}
-
-.slide.is-active{
-  display: block;
-}
-
-.slide-top{
-  margin-bottom: 14px;
-}
-
-.slide-kicker{
-  display: inline-block;
-  padding: 6px 10px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(255,255,255,.05);
-  color: var(--muted);
-  font-size: 16px;
-}
-
-.slide-title{
-  margin: 10px 0 6px;
-  font-size: 24px;
-}
-
-.slide-text{
-  margin: 0;
-  color: var(--muted);
-  font-size: 16px;
-}
-
-.slide-grid{
+/* ✅ 研究セクションの画像2枚表示 */
+.research-media{
+  margin-top: 14px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  margin-top: 12px;
 }
 
+/* 画像枠（Research用） */
 .media{
   margin: 0;
   border: 1px solid var(--line);
@@ -483,76 +408,26 @@ footer{
   border-top: 1px solid rgba(255,255,255,.08);
 }
 
-.slide-notes{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.note{
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: rgba(255,255,255,.05);
-  padding: 10px 12px;
+footer{
+  margin-top: 18px;
+  color: var(--muted);
   font-size: 16px;
-  color: rgba(255,255,255,.86);
+  text-align:center;
+  opacity:.85;
 }
 
-.note strong{ color: rgba(255,255,255,.96); }
-
-/* UI */
-.slider-ui{
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 10px;
-  align-items: center;
-  padding: 12px;
-  border-top: 1px solid rgba(255,255,255,.10);
-  background: rgba(0,0,0,.12);
-}
-
-.nav-btn{
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.06);
-  color: rgba(255,255,255,.9);
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.nav-btn:hover{
-  background: rgba(255,255,255,.10);
-}
-
-.dots{
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.dot-btn{
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.22);
-  background: rgba(255,255,255,.10);
-  cursor: pointer;
-}
-
-.dot-btn.is-active{
-  background: rgba(255,255,255,.70);
-}
+.sep{ opacity:.55; }
 
 /* ===== Responsive ===== */
 @media (max-width: 860px){
   .hero-bg{ grid-template-columns: 1fr; }
   .hero-bg-right{ display:none; }
 
-  .hero-top{ flex-direction: column; }
+  .topbar-inner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .topbar-right{ align-items:flex-start; }
 
   .title h1{ font-size: 36px; }
@@ -560,9 +435,11 @@ footer{
   .grid{ grid-template-columns: 1fr; }
   .card{ min-height: auto; }
 
-  .slide-grid{ grid-template-columns: 1fr; }
+  .research-media{
+    grid-template-columns: 1fr;
+  }
+
   .media img{ height: 220px; }
-  .slide-notes{ grid-template-columns: 1fr; }
 
   /* tooltip位置の安全化 */
   .hover-detail{
